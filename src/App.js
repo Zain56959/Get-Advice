@@ -15,9 +15,11 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      <h1>{advice}</h1>
-      <button onClick={getAdvice}>Get Advice</button>
+    <div className=" flex flex-col items-center justify-center w-full h-screen gap-10">
+      <div className="w-96 bg-purple-400 p-4 rounded-lg shadow-lg animate-bounce">
+      <h1 className="font-semibold text-white text-lg" >{advice}</h1>
+      </div>
+      <button className="bg-green-400 p-4 font-semibold text-white rounded-lg shadow-lg active:bg-green-300 " onClick={getAdvice}>Get Advice</button>
       <Message count={count} />
     </div>
   );
